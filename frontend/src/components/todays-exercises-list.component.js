@@ -29,16 +29,10 @@ export default class TodaysExercisesList extends Component {
     axios.get('http://localhost:5000/exercises/today')
       .then(response => { 
         const today = new Date().toISOString().slice(0,10)
-        /* 
-        let todaysExercises = []
-        response.data.forEach(exercise => {
-          if(exercise.date.slice(0,10)===today){
-            todaysExercises.push(exercise)
-          }
-        });
-        */
         this.setState({ 
-          exercises: response.data.filter(exercise => exercise.date.slice(0,10) === today) 
+          exercises: response.data.filter(exercise => 
+            exercise.date.slice(0,10) === today
+          ) 
         })
       })
       .catch(error => console.log(error));

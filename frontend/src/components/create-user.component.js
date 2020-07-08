@@ -9,7 +9,7 @@ export default class CreateUser extends Component {
 		this.onSubmit = this.onSubmit.bind(this);
 
 		this.state = {
-			username: '',
+			username: ''
 		}
 	}
 
@@ -23,7 +23,7 @@ export default class CreateUser extends Component {
 		e.preventDefault();
 
 		const user = {
-			username: this.state.username,
+			username: this.state.username
 		}
 
 		console.log(user);
